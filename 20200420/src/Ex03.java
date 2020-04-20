@@ -1,21 +1,27 @@
-/*
- * 자연수 1부터 시작해서 모든 홀수를 더해 나간다. 그리고 그합이 언제 (몇을 더했을때)
- * 1000을 넘어서는지 그리고 1000을 넘어선 값은 얼마가 되는지 계산하여 출력하는 프로그램을 작성하자.
- */
-public class Ex03 {
-	public static void main(String[] args) {
-		int a = 1;
-		int total = 0;
-		
-		while(true) {
+import java.util.Scanner;
 
-			total = total + a;
-			a= a+2;
-			
-			if(total > 1000)
-				break;
+public class Ex03 {
+	
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("숫자 입력하세요");
+		int a = Integer.parseInt(scan.nextLine());
+		
+		System.out.println("숫자 입력하세요");
+		int b = scan.nextInt();
+		
+		System.out.println("a = "+ a);
+		System.out.println("b = "+ b);
+		
+		if(a > b) {
+			System.out.println("a 가 큽니다.");
 		}
-		System.out.println(" total = "+total);
-		System.out.println(" a = " + a);
+		else if( a <b){
+			System.out.println("b 가 큽니다");
+		}else{
+			System.out.println("a 와 b는 같습니다.");
+		}
 	}
+
 }
